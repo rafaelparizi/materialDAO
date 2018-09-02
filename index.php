@@ -8,12 +8,29 @@ require_once("config.php");
 
 // echo json_encode($usuarios);
 
-
+//Carrega um usuário
 $root = new Usuario();
 $root->loadById(1);
-
 echo $root;
 
+echo "<br>";
+
+//Carrega uma lista de usuários
+$lista = new Usuario();
+echo json_encode($lista->getList());
+
+echo "<br>";
+
+//Carrega uma lista de usuários pelo login
+$search = new Usuario();
+echo json_encode($search->search("rpa"));
+
+echo "<br>";
+
+//Carrega usuário usando login e senha
+$usuario = new Usuario();
+$usuario->login("usuario","user");
+echo $usuario;
 
 
 
