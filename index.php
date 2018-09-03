@@ -32,6 +32,15 @@ $usuario = new Usuario();
 $usuario->login("usuario","user");
 echo $usuario;
 
+echo "<br>";
+
+echo "<br>";
+
+
+$aluno = new Usuario("rparizi1","1111");
+$aluno->insert();
+
+echo $aluno;
 
 
  ?>
