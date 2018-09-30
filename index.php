@@ -1,7 +1,7 @@
 <?php 
 
 require_once("config.php");
-
+/*
 // $sql = new Sql();
 
 // $usuarios = $sql->select("SELECT * FROM tb_usuarios");
@@ -36,11 +36,17 @@ echo "<br>";
 
 echo "<br>";
 
-
+//Criando um novo usuário
 $aluno = new Usuario("rparizi1","1111");
 $aluno->insert();
 
 echo $aluno;
+*/
 
+$usuario = new Usuario();
+$usuario->loadById(6);
 
+$usuario->update("professor","hahahaha");
+
+echo $usuario;
  ?>
